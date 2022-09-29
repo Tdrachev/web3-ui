@@ -6,22 +6,25 @@ import Link from "next/link";
 type Props = {};
 
 const Navigation = (props: Props) => {
+  //if currentWidth is mobile, then show mobile navigation
+  const [currentWidth, setCurrentWidth] = React.useState(0);
+
   return (
-    <div className=" flex flex-row justify-between items-center align-middle">
+    <div className="hidden lg:flex  flex-row items-center align-middle justify-self-end ">
       <Link href="/">
-        <a className=" text-white text-xl pr-10 ">Home</a>
+        <a className=" text-black md:text-white text-xl pr-5 ">Home</a>
       </Link>
       <Link href="/">
-        <a className=" text-white text-xl pr-10 ">Home</a>
+        <a className=" text-black md:text-white text-xl pr-5 ">Home</a>
       </Link>
       <Link href="/">
-        <a className=" text-white text-xl pr-10 ">Home</a>
+        <a className=" text-black md:text-white text-xl pr-5 ">Home</a>
       </Link>
       <Link href="/">
-        <a className=" text-white text-xl pr-10 ">Home</a>
+        <a className=" text-black md:text-white text-xl pr-5 ">Home</a>
       </Link>
       <Link href="/">
-        <a className=" text-white text-xl pr-10 ">Home</a>
+        <a className=" text-black md:text-white text-xl pr-5 ">Home</a>
       </Link>
     </div>
   );

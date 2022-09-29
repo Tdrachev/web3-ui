@@ -1,13 +1,14 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { createContext } from "react";
+import { createContext, useEffect, useState } from "react";
 import Web3Provider from "web3-react";
 import { Connectors } from "web3-react";
 
 const { InjectedConnector } = Connectors;
 
 const envVariables = {
-  DOMAIN_NAME: process.env.DOMAIN_NAME,
+  domain: process.env.DOMAIN_NAME,
+  isMobile: false,
 };
 
 const MetaMask = new InjectedConnector({ supportedNetworks: [1, 137, 31337] });
