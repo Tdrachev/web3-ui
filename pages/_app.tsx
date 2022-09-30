@@ -1,9 +1,8 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { createContext, useEffect, useState } from "react";
+import { createContext } from "react";
 import Web3Provider from "web3-react";
 import { Connectors } from "web3-react";
-
 const { InjectedConnector } = Connectors;
 
 const envVariables = {
